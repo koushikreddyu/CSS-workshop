@@ -1,0 +1,142 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #d3d3d3;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main";
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: auto 1fr;
+}
+
+.header-row {
+  background-color: #2d4469;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  grid-area: header;
+}
+
+.logo {
+  width: 150px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-bar {
+  margin-right: auto;
+  display: flex;
+}
+
+.search-bar label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.search-bar input {
+  background-color: #fff;
+  border: 0px;
+}
+
+.header-right {
+  display: flex;
+}
+
+.avatar-place-holder{
+  display: flex;
+}
+
+.left-nav {
+  background-color: #324b73;
+  grid-area: nav;
+}
+
+.nav-list li {
+  border-bottom: 1px solid #2d4469;
+}
+
+.nav-list li a{
+  padding: 10px;
+  text-decoration: none;
+  color: #5b82c0;
+  display: block;
+}
+
+.result-table, .content-header {
+  background-color: #fff;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "contentHeader"
+    "firstRow"
+    "table";
+  grid-template-rows: auto 1fr 4fr;
+}
+
+.content-header {
+  display: flex;
+  align-items: stretch;
+  grid-area: contentHeader;
+  padding: 5px 20px;
+}
+
+.content-header h1 {
+  flex-grow: 10;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.content-header p {
+  flex-grow: 1;
+}
+
+.content-header select {
+  flex-grow: 2;
+}
+
+.first-row {
+  grid-area: firstRow;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.first-row a {
+  display: block;
+  background-color: #fff;
+  flex-grow: 1;
+  margin: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.first-row a span {
+  font-size: 4rem;
+  display: block;
+}
+
+.result-table {
+  grid-area: table;
+  margin: 20px;
+  padding: 5px;
+}
